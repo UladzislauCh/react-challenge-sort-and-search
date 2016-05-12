@@ -1,18 +1,27 @@
 import React, { Component } from 'react';
 
-const UserData = () => {
-    return (
-        <tr>
-            <td>
-                <img src="images/owl.svg" className="user-image"/>
-            </td>
-            <td>Chad Snyder</td>
-            <td>28</td>
-            <td><span>8</span><span>(629) 653-9041</span>
-            </td>
-        </tr>
-    );
+var UserData = React.createClass({
+
+    render: function() {
+        return (
+            <tr>
+                <td>
+                    <img src="images/owl.svg" className="user-image"/>
+                </td>
+                <td>{this.props.userData.id}</td>
+                <td>{this.props.userData.age}</td>
+                <td>{this.props.userData.phone}</td>
+            </tr>
+        );
+    }
+});
+
+UserData.propTypes = {
+    userData: React.PropTypes.object
 };
 
+UserData.defaultProps = {
+    userData: {}
+};
 
 export default UserData;

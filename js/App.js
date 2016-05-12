@@ -3,8 +3,7 @@ import SearchBar from './components/SearchBar';
 import ToolBar from './components/ToolBar';
 import ActiveUser from './components/ActiveUser';
 import UserList from './components/UserList';
-//import UserData from './components/UserData';
-
+import UserData from './components/UserData';
 
 export default class App extends Component {
   constructor(props) {
